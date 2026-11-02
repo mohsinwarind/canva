@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+    <head>
+        <title>Canva</title>
+    </head>
+
+    <body>
+        <nav>
+            <button id="penciltool" type="button" style="height: 25px; width: 100px;" onclick="pencil()">Pencil</button>
+<button id="linetool" type="button" style="height: 25px; width: 100px;" onclick="line()">Line</button>
+<button id="rectangletool" type="button" style="height: 25px; width: 100px;" onclick="rectangle()">Rectangle</button> 
+<button id="circletool" type="button" style="height: 25px; width: 100px;" onclick="circle()">Circle</button> 
+<button id="erasertool" type="button" style="height: 25px; width: 100px;" onclick="eraser()">Eraser</button> 
+<button id="resettool" type="button" style="height: 25px; width: 100px;" onclick="reset()">Reset</button>
+<button id="pixelIncrease" type="button" style="height: 25px; width: 100px;" onclick="add_pixel()"> + </button>
+<button id="pixelReduce" type="button" style="height: 25px; width: 100px;" onclick="reduce_pixel()"> -  </button>
+        </nav>
+        <div align="right">
+            {% comment %} <a href="{% static "home" %}">Home</a>
+            <a href="{% static "files" %}"></a> {% endcomment %}
+        </div>
+
+        <hr>
+       <canvas id="paint" width="750" height="450" style="border: 5px solid #000000;">Update your browser to support HTML5 Canvas</canvas>
+
+       <script src="{% static 'frontend/script.js' %}"></script>
+    </body>
+</html>
